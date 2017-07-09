@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * 画面破棄のタイミングで本メッソド内で定義した変数に値を保存する
+     * ※メソッド呼出タイミング：画面が破棄される時
      * @param outState
      * @param outPersistentState
      */
@@ -36,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * onSaveInstanceStateで保存した値を復元する
+     * ※メソッド呼出タイミング：画面が再生成される時
      * @param savedInstanceState
      */
     @Override
