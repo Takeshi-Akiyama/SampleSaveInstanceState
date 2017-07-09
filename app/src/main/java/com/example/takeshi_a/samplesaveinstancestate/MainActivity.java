@@ -1,5 +1,6 @@
 package com.example.takeshi_a.samplesaveinstancestate;
 
+import android.os.PersistableBundle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -21,6 +22,26 @@ public class MainActivity extends AppCompatActivity {
         showClock();
     }
 
+
+    /**
+     * 画面破棄のタイミングで本メッソド内で定義した変数に値を保存する
+     * @param outState
+     * @param outPersistentState
+     */
+    @Override
+    public void onSaveInstanceState(Bundle outState, PersistableBundle outPersistentState) {
+        super.onSaveInstanceState(outState, outPersistentState);
+    }
+
+
+    /**
+     * onSaveInstanceStateで保存した値を復元する
+     * @param savedInstanceState
+     */
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+    }
 
     /**
      * 日時を表示する
