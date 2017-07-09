@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">samplesaveinstancestate</string>
+
+    <!-- ボタン -->
+    <string name="btn_clock">時刻表示</string>
+
+    <!-- テキスト -->
+    <string name="txt_clock">時刻を表示します</string>
+</resources>
