@@ -43,6 +43,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
+        TextView txtResult = (TextView) findViewById(R.id.txt_clock);
+        txtResult.setText(savedInstanceState.getString("saveClock"));
     }
 
     /**
