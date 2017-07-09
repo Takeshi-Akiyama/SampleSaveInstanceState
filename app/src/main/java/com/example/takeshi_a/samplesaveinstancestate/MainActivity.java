@@ -27,11 +27,14 @@ public class MainActivity extends AppCompatActivity {
      * 画面破棄のタイミングで本メッソド内で定義した変数に値を保存する
      * ※メソッド呼出タイミング：画面が破棄される時
      * @param outState
-     * @param outPersistentState
+     *
+     * PersistableBundleは指定しない(上手くSaveした値をRestoreできなかった)
+     * http://qiita.com/calciolife/items/39b2696a9a03e8591d40
+     *
      */
     @Override
-    public void onSaveInstanceState(Bundle outState, PersistableBundle outPersistentState) {
-        super.onSaveInstanceState(outState, outPersistentState);
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
         TextView textResult = (TextView) findViewById(R.id.txt_clock);
         outState.putString("saveClock", textResult.getText().toString());
     }
