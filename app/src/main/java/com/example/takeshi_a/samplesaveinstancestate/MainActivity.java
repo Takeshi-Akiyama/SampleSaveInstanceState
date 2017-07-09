@@ -32,6 +32,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onSaveInstanceState(Bundle outState, PersistableBundle outPersistentState) {
         super.onSaveInstanceState(outState, outPersistentState);
+        TextView textResult = (TextView) findViewById(R.id.txt_clock);
+        outState.putString("saveClock", textResult.getText().toString());
     }
 
 
